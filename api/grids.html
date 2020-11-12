@@ -1,0 +1,645 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Grids &mdash; fteikpy 2.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Eikonal 3D" href="eikonal3d.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> fteikpy
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Reference documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="eikonal2d.html">Eikonal 2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eikonal3d.html">Eikonal 3D</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Grids</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#d">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">3D</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">fteikpy</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">API Reference</a> &raquo;</li>
+        
+      <li>Grids</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/grids.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="grids">
+<h1>Grids<a class="headerlink" href="#grids" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="d">
+<h2>2D<a class="headerlink" href="#d" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="fteikpy.TraveltimeGrid2D">
+<em class="property">class </em><code class="sig-prename descclassname">fteikpy.</code><code class="sig-name descname">TraveltimeGrid2D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">grid</span></em>, <em class="sig-param"><span class="n">gridsize</span></em>, <em class="sig-param"><span class="n">origin</span></em>, <em class="sig-param"><span class="n">source</span></em>, <em class="sig-param"><span class="n">gradient</span></em>, <em class="sig-param"><span class="n">vzero</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fteikpy/_grid.html#TraveltimeGrid2D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fteikpy.TraveltimeGrid2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>2D traveltime grid class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>grid</strong> (<em>array_like</em>) – Traveltime grid array.</p></li>
+<li><p><strong>gridsize</strong> (<em>array_like</em>) – Grid size (dz, dx).</p></li>
+<li><p><strong>origin</strong> (<em>array_like</em>) – Grid origin coordinates.</p></li>
+<li><p><strong>source</strong> (<em>array_like</em>) – Source coordinates.</p></li>
+<li><p><strong>gradient</strong> (<em>array_like</em>) – Gradient grid.</p></li>
+<li><p><strong>vzero</strong> (<em>scalar</em>) – Slowness at the source.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid2D.__call__">
+<code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">points</span></em>, <em class="sig-param"><span class="n">fill_value</span><span class="o">=</span><span class="default_value">nan</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fteikpy/_grid.html#TraveltimeGrid2D.__call__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fteikpy.TraveltimeGrid2D.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bilinear apparent velocity interpolation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<em>array_like</em>) – Query point coordinates or list of point coordinates.</p></li>
+<li><p><strong>fill_value</strong> (<em>scalar</em><em>, </em><em>optional</em><em>, </em><em>default nan</em>) – Returned value for out-of-bound query points.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Interpolated traveltime(s).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>scalar or <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid2D.gradient">
+<em class="property">property </em><code class="sig-name descname">gradient</code><a class="headerlink" href="#fteikpy.TraveltimeGrid2D.gradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return Z and X gradient grids as a list of <a class="reference internal" href="#fteikpy.Grid2D" title="fteikpy.Grid2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">fteikpy.Grid2D</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid2D.grid">
+<em class="property">property </em><code class="sig-name descname">grid</code><a class="headerlink" href="#fteikpy.TraveltimeGrid2D.grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid2D.gridsize">
+<em class="property">property </em><code class="sig-name descname">gridsize</code><a class="headerlink" href="#fteikpy.TraveltimeGrid2D.gridsize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid size.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid2D.ndim">
+<em class="property">property </em><code class="sig-name descname">ndim</code><a class="headerlink" href="#fteikpy.TraveltimeGrid2D.ndim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid number of dimensions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid2D.origin">
+<em class="property">property </em><code class="sig-name descname">origin</code><a class="headerlink" href="#fteikpy.TraveltimeGrid2D.origin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid origin coordinates.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid2D.raytrace">
+<code class="sig-name descname">raytrace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">points</span></em>, <em class="sig-param"><span class="n">stepsize</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fteikpy/_grid.html#TraveltimeGrid2D.raytrace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fteikpy.TraveltimeGrid2D.raytrace" title="Permalink to this definition">¶</a></dt>
+<dd><p>2D a posteriori ray-tracing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<em>array_like</em>) – Query point coordinates or list of point coordinates.</p></li>
+<li><p><strong>stepsize</strong> (<em>scalar</em><em> or </em><em>None</em><em>, </em><em>optional</em><em>, </em><em>default None</em>) – Unit length of ray.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Raypath(s).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> or list of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid2D.shape">
+<em class="property">property </em><code class="sig-name descname">shape</code><a class="headerlink" href="#fteikpy.TraveltimeGrid2D.shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid shape.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid2D.size">
+<em class="property">property </em><code class="sig-name descname">size</code><a class="headerlink" href="#fteikpy.TraveltimeGrid2D.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid size.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid2D.source">
+<em class="property">property </em><code class="sig-name descname">source</code><a class="headerlink" href="#fteikpy.TraveltimeGrid2D.source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return source coordinates.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid2D.xaxis">
+<em class="property">property </em><code class="sig-name descname">xaxis</code><a class="headerlink" href="#fteikpy.TraveltimeGrid2D.xaxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid X axis.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid2D.zaxis">
+<em class="property">property </em><code class="sig-name descname">zaxis</code><a class="headerlink" href="#fteikpy.TraveltimeGrid2D.zaxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid Z axis.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fteikpy.Grid2D">
+<em class="property">class </em><code class="sig-prename descclassname">fteikpy.</code><code class="sig-name descname">Grid2D</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fteikpy/_grid.html#Grid2D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fteikpy.Grid2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>2D grid class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>grid</strong> (<em>array_like</em>) – Grid array.</p></li>
+<li><p><strong>gridsize</strong> (<em>array_like</em>) – Grid size (dz, dx).</p></li>
+<li><p><strong>origin</strong> (<em>array_like</em>) – Grid origin coordinates.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="fteikpy.Grid2D.__call__">
+<code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">points</span></em>, <em class="sig-param"><span class="n">fill_value</span><span class="o">=</span><span class="default_value">nan</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fteikpy.Grid2D.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bilinear interpolation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<em>array_like</em>) – Query point coordinates or list of point coordinates.</p></li>
+<li><p><strong>fill_value</strong> (<em>scalar</em><em>, </em><em>optional</em><em>, </em><em>default nan</em>) – Returned value for out-of-bound query points.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Interpolated value(s).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>scalar or <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.Grid2D.grid">
+<em class="property">property </em><code class="sig-name descname">grid</code><a class="headerlink" href="#fteikpy.Grid2D.grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.Grid2D.gridsize">
+<em class="property">property </em><code class="sig-name descname">gridsize</code><a class="headerlink" href="#fteikpy.Grid2D.gridsize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid size.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.Grid2D.ndim">
+<em class="property">property </em><code class="sig-name descname">ndim</code><a class="headerlink" href="#fteikpy.Grid2D.ndim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid number of dimensions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.Grid2D.origin">
+<em class="property">property </em><code class="sig-name descname">origin</code><a class="headerlink" href="#fteikpy.Grid2D.origin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid origin coordinates.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.Grid2D.shape">
+<em class="property">property </em><code class="sig-name descname">shape</code><a class="headerlink" href="#fteikpy.Grid2D.shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid shape.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.Grid2D.size">
+<em class="property">property </em><code class="sig-name descname">size</code><a class="headerlink" href="#fteikpy.Grid2D.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid size.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.Grid2D.xaxis">
+<em class="property">property </em><code class="sig-name descname">xaxis</code><a class="headerlink" href="#fteikpy.Grid2D.xaxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid X axis.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.Grid2D.zaxis">
+<em class="property">property </em><code class="sig-name descname">zaxis</code><a class="headerlink" href="#fteikpy.Grid2D.zaxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid Z axis.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="id1">
+<h2>3D<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="fteikpy.TraveltimeGrid3D">
+<em class="property">class </em><code class="sig-prename descclassname">fteikpy.</code><code class="sig-name descname">TraveltimeGrid3D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">grid</span></em>, <em class="sig-param"><span class="n">gridsize</span></em>, <em class="sig-param"><span class="n">origin</span></em>, <em class="sig-param"><span class="n">source</span></em>, <em class="sig-param"><span class="n">gradient</span></em>, <em class="sig-param"><span class="n">vzero</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fteikpy/_grid.html#TraveltimeGrid3D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fteikpy.TraveltimeGrid3D" title="Permalink to this definition">¶</a></dt>
+<dd><p>3D traveltime grid class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>grid</strong> (<em>array_like</em>) – Traveltime grid array.</p></li>
+<li><p><strong>gridsize</strong> (<em>array_like</em>) – Grid size (dz, dx, dy).</p></li>
+<li><p><strong>origin</strong> (<em>array_like</em>) – Grid origin coordinates.</p></li>
+<li><p><strong>source</strong> (<em>array_like</em>) – Source coordinates.</p></li>
+<li><p><strong>gradient</strong> (<em>array_like</em>) – Gradient grid.</p></li>
+<li><p><strong>vzero</strong> (<em>scalar</em>) – Slowness at the source.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid3D.__call__">
+<code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">points</span></em>, <em class="sig-param"><span class="n">fill_value</span><span class="o">=</span><span class="default_value">nan</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fteikpy/_grid.html#TraveltimeGrid3D.__call__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fteikpy.TraveltimeGrid3D.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trilinear apparent velocity interpolation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<em>array_like</em>) – Query point coordinates or list of point coordinates.</p></li>
+<li><p><strong>fill_value</strong> (<em>scalar</em><em>, </em><em>optional</em><em>, </em><em>default nan</em>) – Returned value for out-of-bound query points.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Interpolated traveltime(s).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>scalar or <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid3D.gradient">
+<em class="property">property </em><code class="sig-name descname">gradient</code><a class="headerlink" href="#fteikpy.TraveltimeGrid3D.gradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return Z, X and Y gradient grids as a list of <a class="reference internal" href="#fteikpy.Grid3D" title="fteikpy.Grid3D"><code class="xref py py-class docutils literal notranslate"><span class="pre">fteikpy.Grid3D</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid3D.grid">
+<em class="property">property </em><code class="sig-name descname">grid</code><a class="headerlink" href="#fteikpy.TraveltimeGrid3D.grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid3D.gridsize">
+<em class="property">property </em><code class="sig-name descname">gridsize</code><a class="headerlink" href="#fteikpy.TraveltimeGrid3D.gridsize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid size.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid3D.ndim">
+<em class="property">property </em><code class="sig-name descname">ndim</code><a class="headerlink" href="#fteikpy.TraveltimeGrid3D.ndim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid number of dimensions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid3D.origin">
+<em class="property">property </em><code class="sig-name descname">origin</code><a class="headerlink" href="#fteikpy.TraveltimeGrid3D.origin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid origin coordinates.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid3D.raytrace">
+<code class="sig-name descname">raytrace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">points</span></em>, <em class="sig-param"><span class="n">stepsize</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fteikpy/_grid.html#TraveltimeGrid3D.raytrace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fteikpy.TraveltimeGrid3D.raytrace" title="Permalink to this definition">¶</a></dt>
+<dd><p>3D a posteriori ray-tracing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<em>array_like</em>) – Query point coordinates or list of point coordinates.</p></li>
+<li><p><strong>stepsize</strong> (<em>scalar</em><em> or </em><em>None</em><em>, </em><em>optional</em><em>, </em><em>default None</em>) – Unit length of ray.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Raypath(s).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> or list of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid3D.shape">
+<em class="property">property </em><code class="sig-name descname">shape</code><a class="headerlink" href="#fteikpy.TraveltimeGrid3D.shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid shape.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid3D.size">
+<em class="property">property </em><code class="sig-name descname">size</code><a class="headerlink" href="#fteikpy.TraveltimeGrid3D.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid size.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid3D.source">
+<em class="property">property </em><code class="sig-name descname">source</code><a class="headerlink" href="#fteikpy.TraveltimeGrid3D.source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return source coordinates.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid3D.xaxis">
+<em class="property">property </em><code class="sig-name descname">xaxis</code><a class="headerlink" href="#fteikpy.TraveltimeGrid3D.xaxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid X axis.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid3D.yaxis">
+<em class="property">property </em><code class="sig-name descname">yaxis</code><a class="headerlink" href="#fteikpy.TraveltimeGrid3D.yaxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid Y axis.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.TraveltimeGrid3D.zaxis">
+<em class="property">property </em><code class="sig-name descname">zaxis</code><a class="headerlink" href="#fteikpy.TraveltimeGrid3D.zaxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid Z axis.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="fteikpy.Grid3D">
+<em class="property">class </em><code class="sig-prename descclassname">fteikpy.</code><code class="sig-name descname">Grid3D</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fteikpy/_grid.html#Grid3D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fteikpy.Grid3D" title="Permalink to this definition">¶</a></dt>
+<dd><p>3D grid class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>grid</strong> (<em>array_like</em>) – Grid array.</p></li>
+<li><p><strong>gridsize</strong> (<em>array_like</em>) – Grid size (dz, dx, dy).</p></li>
+<li><p><strong>origin</strong> (<em>array_like</em>) – Grid origin coordinates.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="fteikpy.Grid3D.__call__">
+<code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">points</span></em>, <em class="sig-param"><span class="n">fill_value</span><span class="o">=</span><span class="default_value">nan</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fteikpy.Grid3D.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trilinear interpolaton.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<em>array_like</em>) – Query point coordinates or list of point coordinates.</p></li>
+<li><p><strong>fill_value</strong> (<em>scalar</em><em>, </em><em>optional</em><em>, </em><em>default nan</em>) – Returned value for out-of-bound query points.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Interpolated value(s).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>scalar or <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.Grid3D.grid">
+<em class="property">property </em><code class="sig-name descname">grid</code><a class="headerlink" href="#fteikpy.Grid3D.grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.Grid3D.gridsize">
+<em class="property">property </em><code class="sig-name descname">gridsize</code><a class="headerlink" href="#fteikpy.Grid3D.gridsize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid size.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.Grid3D.ndim">
+<em class="property">property </em><code class="sig-name descname">ndim</code><a class="headerlink" href="#fteikpy.Grid3D.ndim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid number of dimensions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.Grid3D.origin">
+<em class="property">property </em><code class="sig-name descname">origin</code><a class="headerlink" href="#fteikpy.Grid3D.origin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid origin coordinates.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.Grid3D.shape">
+<em class="property">property </em><code class="sig-name descname">shape</code><a class="headerlink" href="#fteikpy.Grid3D.shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid shape.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.Grid3D.size">
+<em class="property">property </em><code class="sig-name descname">size</code><a class="headerlink" href="#fteikpy.Grid3D.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid size.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.Grid3D.xaxis">
+<em class="property">property </em><code class="sig-name descname">xaxis</code><a class="headerlink" href="#fteikpy.Grid3D.xaxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid X axis.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.Grid3D.yaxis">
+<em class="property">property </em><code class="sig-name descname">yaxis</code><a class="headerlink" href="#fteikpy.Grid3D.yaxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid Y axis.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="fteikpy.Grid3D.zaxis">
+<em class="property">property </em><code class="sig-name descname">zaxis</code><a class="headerlink" href="#fteikpy.Grid3D.zaxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return grid Z axis.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="eikonal3d.html" class="btn btn-neutral float-left" title="Eikonal 3D" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Keurfon Luu
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
