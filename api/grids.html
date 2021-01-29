@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Grids &mdash; fteikpy 2.0.1 documentation</title>
+  <title>Grids &mdash; fteikpy 2.1.0 documentation</title>
   
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                2.0.1
+                2.1.0
               </div>
             
           
@@ -240,13 +240,14 @@
 
 <dl class="py method">
 <dt id="fteikpy.TraveltimeGrid2D.raytrace">
-<code class="sig-name descname">raytrace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">points</span></em>, <em class="sig-param"><span class="n">stepsize</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fteikpy/_grid.html#TraveltimeGrid2D.raytrace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fteikpy.TraveltimeGrid2D.raytrace" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">raytrace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">points</span></em>, <em class="sig-param"><span class="n">stepsize</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">honor_grid</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fteikpy/_grid.html#TraveltimeGrid2D.raytrace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fteikpy.TraveltimeGrid2D.raytrace" title="Permalink to this definition">¶</a></dt>
 <dd><p>2D a posteriori ray-tracing.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>points</strong> (<em>array_like</em>) – Query point coordinates or list of point coordinates.</p></li>
 <li><p><strong>stepsize</strong> (<em>scalar</em><em> or </em><em>None</em><em>, </em><em>optional</em><em>, </em><em>default None</em>) – Unit length of ray.</p></li>
+<li><p><strong>honor_grid</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default False</em>) – If <cite>True</cite>, coordinates of raypaths are calculated with respect to traveltime grid discretization. <cite>stepsize</cite> might not be honored.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -444,13 +445,14 @@
 
 <dl class="py method">
 <dt id="fteikpy.TraveltimeGrid3D.raytrace">
-<code class="sig-name descname">raytrace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">points</span></em>, <em class="sig-param"><span class="n">stepsize</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fteikpy/_grid.html#TraveltimeGrid3D.raytrace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fteikpy.TraveltimeGrid3D.raytrace" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">raytrace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">points</span></em>, <em class="sig-param"><span class="n">stepsize</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">honor_grid</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fteikpy/_grid.html#TraveltimeGrid3D.raytrace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fteikpy.TraveltimeGrid3D.raytrace" title="Permalink to this definition">¶</a></dt>
 <dd><p>3D a posteriori ray-tracing.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>points</strong> (<em>array_like</em>) – Query point coordinates or list of point coordinates.</p></li>
 <li><p><strong>stepsize</strong> (<em>scalar</em><em> or </em><em>None</em><em>, </em><em>optional</em><em>, </em><em>default None</em>) – Unit length of ray.</p></li>
+<li><p><strong>honor_grid</strong> (<em>bool</em><em>, </em><em>optional</em><em>, </em><em>default False</em>) – If <cite>True</cite>, coordinates of raypaths are calculated with respect to traveltime grid discretization. <cite>stepsize</cite> might not be honored.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
